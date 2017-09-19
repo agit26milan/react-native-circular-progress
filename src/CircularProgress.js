@@ -52,7 +52,7 @@ export default class CircularProgress extends React.Component {
             justifyContent: 'center'
           }}
         >
-          {children}
+          {children(fill)}
         </View>}
       </View>
     )
@@ -68,7 +68,7 @@ CircularProgress.propTypes = {
   backgroundColor: PropTypes.string,
   rotation: PropTypes.number,
   linecap: PropTypes.string,
-  children: PropTypes.object
+  children: PropTypes.func
 }
 
 CircularProgress.defaultProps = {
