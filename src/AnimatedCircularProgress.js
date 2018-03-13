@@ -66,10 +66,8 @@ export default class AnimatedCircularProgress extends React.Component {
 
 AnimatedCircularProgress.propTypes = {
   style: ViewPropTypes.style,
-  size: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.object,
-  ]).isRequired,
+  transparent: PropTypes.bool,
+  size: PropTypes.number.isRequired,
   fill: PropTypes.number,
   prefill: PropTypes.number,
   width: PropTypes.number.isRequired,
