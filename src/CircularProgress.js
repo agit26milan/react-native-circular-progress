@@ -38,7 +38,6 @@ export default class CircularProgress extends React.Component {
       tintColor,
       backgroundColor,
       style,
-      transparent,
       rotation,
       linecap,
       arcSweepAngle,
@@ -59,7 +58,7 @@ export default class CircularProgress extends React.Component {
       borderRadius: offset / 2,
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: transparent ? 'transparent' : 'white'
+      backgroundColor: 'transparent'
     };
 
     return (
@@ -68,7 +67,7 @@ export default class CircularProgress extends React.Component {
           width={size}
           height={size}
           key={this.state.appState}
-          style={{ backgroundColor: transparent ? 'transparent' : 'white' }}
+          style={{ backgroundColor: 'transparent' }}
         >
           <Group rotation={rotation - 90} originX={size/2} originY={size/2}>
             { backgroundColor !== 'transparent' && (
@@ -99,7 +98,6 @@ export default class CircularProgress extends React.Component {
 
 CircularProgress.propTypes = {
   style: ViewPropTypes.style,
-  transparent: PropTypes.bool,
   size: PropTypes.number.isRequired,
   fill: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
@@ -113,7 +111,6 @@ CircularProgress.propTypes = {
 }
 
 CircularProgress.defaultProps = {
-  transparent: true,
   tintColor: 'black',
   backgroundColor: '#e4e4e4',
   rotation: 90,
