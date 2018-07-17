@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { View, Animated } from 'react-native';
+import { Animated, ViewPropTypes } from 'react-native';
 import CircularFillingProgress from './CircularFillingProgress';
 const AnimatedProgress = Animated.createAnimatedComponent(CircularFillingProgress);
 
 export default class AnimatedCircularProgress extends Component {
   static propTypes = {
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
     fill: React.PropTypes.number,
     prefill: React.PropTypes.number,
     tintColor: React.PropTypes.string,
