@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Platform } from 'react-native';
+import { View, Platform, ViewPropTypes } from 'react-native';
 import { Surface, Shape, Path, Group } from 'react-native/Libraries/ART/ReactNativeART';
 
 const REACT_ART_MOVE_POINT = 0;
@@ -20,7 +20,7 @@ const fillForCriticalPoints = {
 
 export default class CircularFillingProgress extends Component {
   static propTypes = {
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
     fill: React.PropTypes.number.isRequired,
     tintColor: React.PropTypes.string,
     innerCircleBackgroundColor: React.PropTypes.string,
